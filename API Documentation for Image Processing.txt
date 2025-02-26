@@ -1,0 +1,34 @@
+API Documentation for Image Processing System
+1. Upload API
+Endpoint:
+POST /upload
+Description:
+Uploads a CSV file containing image URLs and starts processing.
+- Generates a unique request ID.
+- Triggers asynchronous image processing.
+- Calls a webhook (if provided) when processing is complete.
+Request Parameters:
+Example Request (Using cURL):
+curl -X POST -F "file=@sample_test.csv" -F "webhook_url=https://example.com/webhook" http://127.0.0.1:5000/upload
+Example Response:
+{
+    "message": "Processing started",
+    "request_id": "123e4567-e89b-12d3-a456-426614174000"
+}
+2. Status API
+Endpoint:
+GET /status/<request_id>
+Description:
+Retrieves the status of a processing request.
+Example Request:
+curl -X GET http://127.0.0.1:5000/status/123e4567-e89b-12d3-a456-426614174000
+Example Response (Processing):
+{
+    "status": "Processing",
+    "output_file": null
+}
+Example Response (Completed):
+{
+    "status": "Completed",
+    "output_file": "processed_images/123e4567-e89b-12d3-a456-426614174000.csv"
+}
