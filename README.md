@@ -12,3 +12,6 @@ curl -X POST -F "file=@sample_test.csv" -F "webhook_url=https://example.com/webh
 
 Similarly, if you want to check the status then use this command<br>
 curl -X GET http://127.0.0.1:5000/status/<request_id><br>
+
+You can also test the API's using Postman, below is the link
+https://www.postman.com/mission-pilot-24119400/image-processing/collection/ab6u1sc/image-processing?action=share&creator=37193378
