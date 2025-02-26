@@ -1,6 +1,6 @@
 # Image-Processing
 
-To start the program just use **python main.py**\n
+To start the program just use **python main.py**
 You will need to download some libraries to run main.py just google it and you will get it
 
 I have attached a file for you refrence in the code
